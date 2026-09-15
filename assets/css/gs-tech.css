@@ -1,0 +1,8452 @@
+/* ==========================================================
+   GS TECH SOLUTIONS
+   Custom Modern IT / Software Agency UI
+   Bootstrap 5 + Arsha Override
+========================================================== */
+
+/* ==========================================================
+   1. ROOT VARIABLES
+========================================================== */
+
+:root {
+    --gs-primary: #2563eb;
+    --gs-primary-dark: #1d4ed8;
+    --gs-secondary: #06b6d4;
+    --gs-accent: #22c55e;
+
+    --gs-dark: #07111f;
+    --gs-dark-2: #0b1728;
+    --gs-dark-3: #101f35;
+
+    --gs-text: #172033;
+    --gs-muted: #64748b;
+
+    --gs-white: #ffffff;
+    --gs-light: #f7f9fc;
+    --gs-border: #e5eaf1;
+
+    --gs-radius: 18px;
+    --gs-radius-sm: 12px;
+
+    --gs-shadow:
+        0 20px 60px rgba(15, 23, 42, 0.08);
+
+    --gs-shadow-hover:
+        0 25px 70px rgba(37, 99, 235, 0.15);
+
+    --gs-transition: all 0.3s ease;
+}
+
+
+/* ==========================================================
+   2. GLOBAL RESET
+========================================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body.gs-page {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    color: var(--gs-text);
+    background: var(--gs-white);
+    overflow-x: hidden;
+}
+
+body.gs-page h1,
+body.gs-page h2,
+body.gs-page h3,
+body.gs-page h4,
+body.gs-page h5,
+body.gs-page h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+body.gs-page a {
+    text-decoration: none;
+}
+
+body.gs-page img {
+    max-width: 100%;
+}
+
+body.gs-page button,
+body.gs-page input,
+body.gs-page textarea,
+body.gs-page select {
+    font-family: inherit;
+}
+
+
+/* ==========================================================
+   3. HEADER
+========================================================== */
+
+.gs-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    background: rgba(255, 255, 255, 0.92) !important;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+
+    padding: 0 !important;
+
+    transition: var(--gs-transition);
+}
+
+.gs-header .container {
+    max-width: 1320px;
+}
+
+.gs-navbar {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* ==========================================================
+   4. LOGO
+========================================================== */
+
+.gs-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+
+    flex-shrink: 0;
+
+    color: var(--gs-dark) !important;
+}
+
+.gs-logo:hover {
+    color: var(--gs-dark) !important;
+}
+
+.gs-logo-mark {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gs-primary),
+            var(--gs-secondary)
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.25);
+
+    overflow: hidden;
+}
+
+.gs-logo-mark::before {
+    content: "";
+
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+
+    border: 2px solid rgba(255,255,255,0.35);
+
+    border-radius: 50%;
+
+    top: -8px;
+    right: -8px;
+}
+
+.gs-logo-mark span {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1;
+
+    position: relative;
+    z-index: 2;
+}
+
+.gs-logo-mark span + span {
+    margin-left: -3px;
+}
+
+.gs-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.gs-logo-text strong {
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+
+    letter-spacing: -0.4px;
+}
+
+.gs-logo-text small {
+    margin-top: 5px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--gs-primary);
+}
+
+
+/* ==========================================================
+   5. DESKTOP NAVIGATION
+========================================================== */
+
+.gs-navmenu {
+    margin-left: auto;
+}
+
+.gs-navmenu ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    list-style: none;
+}
+
+.gs-navmenu li {
+    list-style: none;
+}
+
+.gs-navmenu a {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 10px 12px;
+
+    color: #334155 !important;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition: var(--gs-transition);
+}
+
+.gs-navmenu a:hover,
+.gs-navmenu a.active {
+    color: var(--gs-primary) !important;
+    background: rgba(37, 99, 235, 0.07);
+}
+
+
+/* ==========================================================
+   6. HEADER CTA
+========================================================== */
+
+.gs-header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    color: #fff !important;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gs-primary),
+            var(--gs-secondary)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.2);
+
+    transition: var(--gs-transition);
+
+    white-space: nowrap;
+}
+
+.gs-header-btn i {
+    font-size: 15px;
+}
+
+.gs-header-btn:hover {
+    color: #fff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(37, 99, 235, 0.3);
+}
+
+
+/* ==========================================================
+   7. MOBILE TOGGLE
+========================================================== */
+
+.gs-mobile-toggle {
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    border: 0;
+    border-radius: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+    color: var(--gs-primary);
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.gs-mobile-toggle:hover {
+    background: var(--gs-primary);
+    color: #fff;
+}
+
+
+/* ==========================================================
+   8. MOBILE MENU
+========================================================== */
+
+.gs-mobile-menu {
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: min(390px, 92%);
+    height: 100vh;
+
+    z-index: 10001;
+
+    background: #fff;
+
+    box-shadow:
+        -20px 0 60px rgba(15, 23, 42, 0.15);
+
+    transition: right 0.35s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.gs-mobile-menu.active {
+    right: 0;
+}
+
+.gs-mobile-menu-header {
+    min-height: 82px;
+
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--gs-border);
+}
+
+.gs-mobile-close {
+    width: 40px;
+    height: 40px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: #f1f5f9;
+
+    color: var(--gs-dark);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.gs-mobile-close:hover {
+    background: var(--gs-dark);
+    color: #fff;
+}
+
+.gs-mobile-links {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    overflow-y: auto;
+}
+
+.gs-mobile-links a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 13px 14px;
+
+    border-radius: 10px;
+
+    color: #334155 !important;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--gs-transition);
+}
+
+.gs-mobile-links a i {
+    width: 22px;
+
+    color: var(--gs-primary);
+
+    font-size: 17px;
+}
+
+.gs-mobile-links a:hover {
+    background: #eff6ff;
+    color: var(--gs-primary) !important;
+}
+
+.gs-mobile-cta {
+    margin-top: auto;
+
+    padding: 22px;
+
+    background: var(--gs-light);
+
+    border-top: 1px solid var(--gs-border);
+}
+
+.gs-mobile-cta small {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--gs-muted);
+
+    font-size: 12px;
+}
+
+.gs-mobile-cta a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--gs-primary);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.gs-mobile-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    background: rgba(2, 6, 23, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: var(--gs-transition);
+}
+
+.gs-mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==========================================================
+   9. MAIN
+========================================================== */
+
+.gs-main {
+    position: relative;
+}
+
+
+/* ==========================================================
+   10. HERO
+========================================================== */
+
+.gs-hero {
+    min-height: 760px;
+
+    padding:
+        150px
+        0
+        100px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(37, 99, 235, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(6, 182, 212, 0.08),
+            transparent 30%
+        ),
+        #f8fbff;
+}
+
+.gs-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -200px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.gs-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -120px;
+    top: 170px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(6, 182, 212, 0.08);
+}
+
+.gs-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.gs-hero .row {
+    align-items: center;
+}
+
+.gs-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border-radius: 50px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    color: var(--gs-primary);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.gs-hero-eyebrow::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--gs-accent);
+
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
+.gs-hero h1 {
+    max-width: 760px;
+
+    margin:
+        22px
+        0
+        20px;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -2.5px;
+
+    color: var(--gs-dark);
+}
+
+.gs-hero h1 span {
+    background:
+        linear-gradient(
+            90deg,
+            var(--gs-primary),
+            var(--gs-secondary)
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gs-hero p {
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    color: var(--gs-muted);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.gs-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+
+    margin-bottom: 30px;
+}
+
+.gs-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 14px 21px;
+
+    border-radius: 10px;
+
+    color: #fff !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gs-primary),
+            var(--gs-secondary)
+        );
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.22);
+
+    transition: var(--gs-transition);
+}
+
+.gs-btn-primary:hover {
+    color: #fff !important;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(37, 99, 235, 0.28);
+}
+
+.gs-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    border: 1px solid var(--gs-border);
+    border-radius: 10px;
+
+    color: var(--gs-dark) !important;
+
+    background: #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: var(--gs-transition);
+}
+
+.gs-btn-outline:hover {
+    border-color: var(--gs-primary);
+
+    color: var(--gs-primary) !important;
+
+    transform: translateY(-2px);
+}
+
+.gs-trust-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.gs-trust-points span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #475569;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gs-trust-points i {
+    color: var(--gs-accent);
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   11. HERO CODE CARD
+========================================================== */
+
+.gs-code-window {
+    max-width: 500px;
+
+    margin-left: auto;
+
+    position: relative;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #0a1526;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 35px 90px rgba(15, 23, 42, 0.25);
+}
+
+.gs-code-header {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 18px;
+
+    background: #101e32;
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.gs-code-dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #475569;
+}
+
+.gs-code-title {
+    margin-left: auto;
+
+    color: #64748b;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.gs-code-body {
+    padding: 30px;
+
+    min-height: 390px;
+}
+
+.gs-code-line {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #94a3b8;
+
+    font-family: Consolas, Monaco, monospace;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.gs-code-line .blue {
+    color: #60a5fa;
+}
+
+.gs-code-line .green {
+    color: #4ade80;
+}
+
+.gs-code-line .cyan {
+    color: #22d3ee;
+}
+
+.gs-code-line .purple {
+    color: #c084fc;
+}
+
+.gs-code-line .white {
+    color: #e2e8f0;
+}
+
+.gs-code-line.indent {
+    padding-left: 25px;
+}
+
+.gs-floating-card {
+    position: absolute;
+
+    right: -20px;
+    bottom: 30px;
+
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    background: #fff;
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.18);
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gs-floating-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ecfdf5;
+    color: #16a34a;
+
+    font-size: 19px;
+}
+
+.gs-floating-card strong {
+    display: block;
+
+    font-size: 13px;
+    color: var(--gs-dark);
+}
+
+.gs-floating-card small {
+    color: var(--gs-muted);
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   12. SECTION COMMON
+========================================================== */
+
+.gs-section {
+    padding: 100px 0;
+}
+
+.gs-section-light {
+    background: var(--gs-light);
+}
+
+.gs-section-dark {
+    background: var(--gs-dark);
+    color: #fff;
+}
+
+.gs-section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.gs-section-heading .eyebrow {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--gs-primary);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.gs-section-heading h2 {
+    margin-bottom: 15px;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.3px;
+
+    color: var(--gs-dark);
+}
+
+.gs-section-heading p {
+    margin: 0;
+
+    color: var(--gs-muted);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.gs-section-dark .gs-section-heading h2 {
+    color: #fff;
+}
+
+.gs-section-dark .gs-section-heading p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================================
+   13. STATS
+========================================================== */
+
+.gs-stats {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -45px;
+
+    padding-bottom: 20px;
+}
+
+.gs-stat-card {
+    height: 100%;
+
+    padding: 27px 25px;
+
+    background: #fff;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 40px rgba(15, 23, 42, 0.06);
+
+    transition: var(--gs-transition);
+}
+
+.gs-stat-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--gs-shadow-hover);
+
+    border-color: #dbeafe;
+}
+
+.gs-stat-number {
+    margin-bottom: 5px;
+
+    color: var(--gs-primary);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.gs-stat-label {
+    color: var(--gs-muted);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   14. SOLUTION CARDS
+========================================================== */
+
+.gs-solution-card {
+    height: 100%;
+
+    padding: 27px;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: var(--gs-radius);
+
+    background: #fff;
+
+    transition: var(--gs-transition);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.gs-solution-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -45px;
+    top: -45px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.gs-solution-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #bfdbfe;
+
+    box-shadow: var(--gs-shadow-hover);
+}
+
+.gs-solution-icon {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eff6ff;
+    color: var(--gs-primary);
+
+    font-size: 23px;
+
+    transition: var(--gs-transition);
+}
+
+.gs-solution-card:hover .gs-solution-icon {
+    background: var(--gs-primary);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.gs-solution-card h3 {
+    margin-bottom: 9px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--gs-dark);
+}
+
+.gs-solution-card p {
+    margin: 0;
+
+    color: var(--gs-muted);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   15. ABOUT
+========================================================== */
+
+.gs-about {
+    padding: 100px 0;
+}
+
+.gs-about-content h2 {
+    margin-bottom: 20px;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+}
+
+.gs-about-content h2 span {
+    color: var(--gs-primary);
+}
+
+.gs-about-content > p {
+    margin-bottom: 25px;
+
+    color: var(--gs-muted);
+
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.gs-check-list {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 13px 25px;
+
+    list-style: none;
+}
+
+.gs-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.gs-check-list i {
+    color: var(--gs-accent);
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================
+   16. ABOUT VISUAL
+========================================================== */
+
+.gs-about-visual {
+    position: relative;
+
+    min-height: 440px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-about-main-card {
+    width: 85%;
+    min-height: 340px;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b1728,
+            #10243e
+        );
+
+    box-shadow:
+        0 35px 80px rgba(15, 23, 42, 0.2);
+
+    position: relative;
+    z-index: 2;
+}
+
+.gs-about-main-card h3 {
+    margin-bottom: 10px;
+
+    color: #fff;
+
+    font-size: 22px;
+}
+
+.gs-about-main-card p {
+    color: #94a3b8;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.gs-about-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.gs-about-feature:last-child {
+    border-bottom: 0;
+}
+
+.gs-about-feature i {
+    color: #60a5fa;
+
+    font-size: 19px;
+}
+
+.gs-about-feature strong {
+    display: block;
+
+    color: #fff;
+
+    font-size: 12px;
+}
+
+.gs-about-feature small {
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+.gs-about-badge {
+    position: absolute;
+
+    right: 0;
+    bottom: 35px;
+
+    padding: 16px 20px;
+
+    border-radius: 14px;
+
+    background: #fff;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.15);
+
+    z-index: 3;
+}
+
+.gs-about-badge strong {
+    display: block;
+
+    color: var(--gs-primary);
+
+    font-size: 22px;
+}
+
+.gs-about-badge span {
+    color: var(--gs-muted);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   17. WHY CHOOSE US
+========================================================== */
+
+.gs-why {
+    padding: 100px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #f1f7ff
+        );
+}
+
+.gs-why-card {
+    height: 100%;
+
+    padding: 30px;
+
+    background: #fff;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: var(--gs-radius);
+
+    transition: var(--gs-transition);
+}
+
+.gs-why-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--gs-shadow-hover);
+}
+
+.gs-why-number {
+    margin-bottom: 18px;
+
+    color: #dbeafe;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.gs-why-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--gs-dark);
+
+    font-size: 18px;
+}
+
+.gs-why-card p {
+    margin: 0;
+
+    color: var(--gs-muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   18. SERVICES
+========================================================== */
+
+.gs-service-card {
+    height: 100%;
+
+    padding: 30px;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    transition: var(--gs-transition);
+
+    position: relative;
+}
+
+.gs-service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #bfdbfe;
+
+    box-shadow: var(--gs-shadow-hover);
+}
+
+.gs-service-number {
+    position: absolute;
+
+    top: 22px;
+    right: 24px;
+
+    color: #e2e8f0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.gs-service-icon {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        );
+
+    color: var(--gs-primary);
+
+    font-size: 24px;
+}
+
+.gs-service-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--gs-dark);
+}
+
+.gs-service-card p {
+    margin: 0;
+
+    color: var(--gs-muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   19. TECHNOLOGY
+========================================================== */
+
+.gs-tech {
+    padding: 100px 0;
+
+    background: var(--gs-dark);
+
+    color: #fff;
+}
+
+.gs-tech .gs-section-heading h2 {
+    color: #fff;
+}
+
+.gs-tech .gs-section-heading p {
+    color: #94a3b8;
+}
+
+.gs-tech-skill {
+    margin-bottom: 24px;
+}
+
+.gs-tech-skill:last-child {
+    margin-bottom: 0;
+}
+
+.gs-tech-skill-head {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+}
+
+.gs-tech-skill-head span {
+    color: #cbd5e1;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gs-tech-skill-head strong {
+    color: #60a5fa;
+
+    font-size: 12px;
+}
+
+.gs-progress {
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.08);
+}
+
+.gs-progress span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gs-primary),
+            var(--gs-secondary)
+        );
+}
+
+.gs-tech-stack {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.gs-tech-box {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 8px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.03);
+
+    transition: var(--gs-transition);
+}
+
+.gs-tech-box:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(96,165,250,0.4);
+
+    background: rgba(37,99,235,0.08);
+}
+
+.gs-tech-box i {
+    color: #60a5fa;
+
+    font-size: 25px;
+}
+
+.gs-tech-box span {
+    color: #cbd5e1;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   20. PROCESS
+========================================================== */
+
+.gs-process-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 30px;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    transition: var(--gs-transition);
+}
+
+.gs-process-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--gs-shadow-hover);
+}
+
+.gs-process-number {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--gs-primary);
+
+    color: #fff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,0.22);
+}
+
+.gs-process-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.gs-process-card p {
+    margin: 0;
+
+    color: var(--gs-muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   21. PORTFOLIO
+========================================================== */
+
+.gs-portfolio-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    transition: var(--gs-transition);
+}
+
+.gs-portfolio-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--gs-shadow-hover);
+}
+
+.gs-portfolio-preview {
+    min-height: 230px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        );
+}
+
+.gs-browser {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    box-shadow:
+        0 15px 35px rgba(15,23,42,0.12);
+}
+
+.gs-browser-bar {
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    padding-left: 10px;
+
+    background: #e2e8f0;
+}
+
+.gs-browser-bar span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #94a3b8;
+}
+
+.gs-browser-content {
+    height: 145px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+}
+
+.gs-browser-header {
+    height: 12px;
+
+    width: 60%;
+
+    margin-bottom: 12px;
+
+    border-radius: 5px;
+
+    background: #bfdbfe;
+}
+
+.gs-browser-blocks {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 7px;
+}
+
+.gs-browser-block {
+    height: 70px;
+
+    border-radius: 6px;
+
+    background: #e2e8f0;
+}
+
+.gs-portfolio-content {
+    padding: 23px;
+}
+
+.gs-portfolio-content small {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--gs-primary);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.gs-portfolio-content h3 {
+    margin-bottom: 7px;
+
+    font-size: 18px;
+}
+
+.gs-portfolio-content p {
+    margin: 0;
+
+    color: var(--gs-muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   22. CTA
+========================================================== */
+
+.gs-cta {
+    padding: 80px 0;
+}
+
+.gs-cta-box {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 65px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b1728,
+            #12315a
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 30px 70px rgba(15,23,42,0.18);
+}
+
+.gs-cta-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -100px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(37,99,235,0.2);
+}
+
+.gs-cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: -100px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    background: rgba(6,182,212,0.1);
+}
+
+.gs-cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.gs-cta-content h2 {
+    max-width: 700px;
+
+    margin-bottom: 15px;
+
+    color: #fff;
+
+    font-size: clamp(30px, 4vw, 45px);
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.gs-cta-content p {
+    max-width: 650px;
+
+    margin-bottom: 25px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   23. TEAM
+========================================================== */
+
+.gs-team-card {
+    height: 100%;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    transition: var(--gs-transition);
+}
+
+.gs-team-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--gs-shadow-hover);
+}
+
+.gs-team-avatar {
+    width: 95px;
+    height: 95px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gs-primary),
+            var(--gs-secondary)
+        );
+
+    color: #fff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 29px;
+    font-weight: 800;
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,0.2);
+}
+
+.gs-team-card h3 {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+}
+
+.gs-team-card .role {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--gs-primary);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gs-team-card p {
+    margin-bottom: 17px;
+
+    color: var(--gs-muted);
+
+    font-size: 12px;
+}
+
+.gs-team-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--gs-dark);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.gs-team-phone i {
+    color: var(--gs-primary);
+}
+
+
+/* ==========================================================
+   24. PRICING / SOLUTIONS
+========================================================== */
+
+.gs-pricing-card {
+    height: 100%;
+
+    padding: 30px;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    transition: var(--gs-transition);
+}
+
+.gs-pricing-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--gs-shadow-hover);
+}
+
+.gs-pricing-card.featured {
+    position: relative;
+
+    border: 2px solid var(--gs-primary);
+
+    box-shadow:
+        0 20px 60px rgba(37,99,235,0.12);
+}
+
+.gs-pricing-badge {
+    position: absolute;
+
+    top: -13px;
+    left: 25px;
+
+    padding: 6px 12px;
+
+    border-radius: 50px;
+
+    background: var(--gs-primary);
+
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gs-pricing-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 19px;
+}
+
+.gs-pricing-card p {
+    min-height: 52px;
+
+    color: var(--gs-muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.gs-pricing-list {
+    margin: 20px 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.gs-pricing-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    padding: 8px 0;
+
+    color: #475569;
+
+    font-size: 12px;
+}
+
+.gs-pricing-list i {
+    color: var(--gs-accent);
+
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   25. FAQ
+========================================================== */
+
+.gs-faq .accordion-item {
+    margin-bottom: 12px;
+
+    border: 1px solid var(--gs-border) !important;
+
+    border-radius: 13px !important;
+
+    overflow: hidden;
+
+    background: #fff;
+}
+
+.gs-faq .accordion-button {
+    padding: 19px 22px;
+
+    color: var(--gs-dark);
+
+    background: #fff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow: none !important;
+}
+
+.gs-faq .accordion-button:not(.collapsed) {
+    color: var(--gs-primary);
+
+    background: #eff6ff;
+}
+
+.gs-faq .accordion-button::after {
+    background-size: 13px;
+}
+
+.gs-faq .accordion-body {
+    padding: 0 22px 20px;
+
+    color: var(--gs-muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   26. CONTACT
+========================================================== */
+
+.gs-contact {
+    padding: 100px 0;
+
+    background: #f8fafc;
+}
+
+.gs-contact-info {
+    height: 100%;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b1728,
+            #102b4e
+        );
+
+    color: #fff;
+}
+
+.gs-contact-info h3 {
+    margin-bottom: 12px;
+
+    color: #fff;
+
+    font-size: 25px;
+}
+
+.gs-contact-info > p {
+    margin-bottom: 30px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.gs-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    margin-bottom: 22px;
+}
+
+.gs-contact-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(96,165,250,0.1);
+
+    color: #60a5fa;
+
+    font-size: 17px;
+}
+
+.gs-contact-item strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #fff;
+
+    font-size: 12px;
+}
+
+.gs-contact-item span,
+.gs-contact-item a {
+    color: #94a3b8 !important;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.gs-contact-form {
+    padding: 35px;
+
+    border: 1px solid var(--gs-border);
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    box-shadow:
+        0 15px 50px rgba(15,23,42,0.05);
+}
+
+.gs-contact-form h3 {
+    margin-bottom: 7px;
+
+    font-size: 25px;
+}
+
+.gs-contact-form > p {
+    margin-bottom: 25px;
+
+    color: var(--gs-muted);
+
+    font-size: 12px;
+}
+
+.gs-form-group {
+    margin-bottom: 17px;
+}
+
+.gs-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.gs-form-group input,
+.gs-form-group select,
+.gs-form-group textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #dce3ec;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: var(--gs-dark);
+
+    font-size: 12px;
+
+    transition: var(--gs-transition);
+}
+
+.gs-form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.gs-form-group input:focus,
+.gs-form-group select:focus,
+.gs-form-group textarea:focus {
+    border-color: var(--gs-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,0.08);
+}
+
+
+/* ==========================================================
+   27. FOOTER
+========================================================== */
+
+.gs-footer {
+    background: #050d18;
+
+    color: #94a3b8;
+
+    padding-top: 70px;
+}
+
+.gs-footer-brand p {
+    max-width: 320px;
+
+    margin-top: 18px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.gs-footer h4 {
+    margin-bottom: 20px;
+
+    color: #fff;
+
+    font-size: 14px;
+}
+
+.gs-footer ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.gs-footer ul li {
+    margin-bottom: 10px;
+}
+
+.gs-footer ul li a {
+    color: #64748b !important;
+
+    font-size: 12px;
+
+    transition: var(--gs-transition);
+}
+
+.gs-footer ul li a:hover {
+    color: #60a5fa !important;
+}
+
+.gs-footer-bottom {
+    margin-top: 50px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.gs-footer-bottom p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.gs-footer-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gs-footer-social a {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: #94a3b8 !important;
+
+    font-size: 14px;
+
+    transition: var(--gs-transition);
+}
+
+.gs-footer-social a:hover {
+    background: var(--gs-primary);
+
+    color: #fff !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   28. SCROLL TOP
+========================================================== */
+
+.gs-page .scroll-top {
+    width: 42px;
+    height: 42px;
+
+    right: 20px;
+    bottom: 20px;
+
+    border-radius: 10px;
+
+    background: var(--gs-primary);
+
+    color: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,0.25);
+}
+
+.gs-page .scroll-top:hover {
+    background: var(--gs-primary-dark);
+}
+
+
+/* ==========================================================
+   29. BUTTON OVERRIDES
+========================================================== */
+
+.gs-page .btn-primary {
+    border: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gs-primary),
+            var(--gs-secondary)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,0.18);
+}
+
+.gs-page .btn-primary:hover {
+    background:
+        linear-gradient(
+            135deg,
+            var(--gs-primary-dark),
+            var(--gs-primary)
+        );
+}
+
+
+/* ==========================================================
+   30. AOS / ANIMATION
+========================================================== */
+
+.gs-page [data-aos] {
+    transition-duration: 700ms !important;
+}
+
+
+/* ==========================================================
+   31. RESPONSIVE - TABLET
+========================================================== */
+
+@media (max-width: 1199px) {
+
+    .gs-navmenu a {
+        padding-left: 8px;
+        padding-right: 8px;
+
+        font-size: 12px;
+    }
+
+    .gs-header-btn {
+        padding: 11px 14px;
+
+        font-size: 12px;
+    }
+
+    .gs-hero h1 {
+        font-size: 52px;
+    }
+
+    .gs-floating-card {
+        right: 0;
+    }
+}
+
+
+/* ==========================================================
+   32. RESPONSIVE - MOBILE
+========================================================== */
+
+@media (max-width: 991px) {
+
+    .gs-navbar {
+        min-height: 72px;
+    }
+
+    .gs-navmenu,
+    .gs-header-btn {
+        display: none;
+    }
+
+    .gs-mobile-toggle {
+        display: flex;
+    }
+
+    .gs-hero {
+        min-height: auto;
+
+        padding:
+            125px
+            0
+            80px;
+    }
+
+    .gs-hero h1 {
+        max-width: 100%;
+
+        font-size: 45px;
+    }
+
+    .gs-hero p {
+        font-size: 15px;
+    }
+
+    .gs-code-window {
+        margin:
+            55px
+            auto
+            0;
+
+        max-width: 600px;
+    }
+
+    .gs-section,
+    .gs-about,
+    .gs-why,
+    .gs-tech,
+    .gs-contact {
+        padding: 80px 0;
+    }
+
+    .gs-stats {
+        margin-top: 0;
+
+        padding-top: 30px;
+    }
+
+    .gs-about-visual {
+        margin-top: 45px;
+    }
+
+    .gs-cta-box {
+        padding: 50px 35px;
+    }
+}
+
+
+/* ==========================================================
+   33. RESPONSIVE - SMALL MOBILE
+========================================================== */
+
+@media (max-width: 767px) {
+
+    .gs-logo-mark {
+        width: 39px;
+        height: 39px;
+    }
+
+    .gs-logo-text strong {
+        font-size: 15px;
+    }
+
+    .gs-logo-text small {
+        font-size: 8px;
+        letter-spacing: 2.5px;
+    }
+
+    .gs-hero {
+        padding-top: 110px;
+    }
+
+    .gs-hero h1 {
+        font-size: 39px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .gs-hero p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .gs-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gs-btn-primary,
+    .gs-btn-outline {
+        width: 100%;
+    }
+
+    .gs-trust-points {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gs-code-body {
+        padding: 22px;
+
+        min-height: 330px;
+    }
+
+    .gs-code-line {
+        font-size: 10px;
+    }
+
+    .gs-floating-card {
+        right: 12px;
+        bottom: 18px;
+    }
+
+    .gs-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .gs-section-heading h2 {
+        font-size: 32px;
+    }
+
+    .gs-check-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-about-main-card {
+        width: 100%;
+
+        padding: 25px;
+    }
+
+    .gs-about-badge {
+        right: 10px;
+        bottom: 15px;
+    }
+
+    .gs-tech-stack {
+        grid-template-columns: repeat(2, 1fr);
+
+        margin-top: 40px;
+    }
+
+    .gs-cta-box {
+        padding: 40px 25px;
+    }
+
+    .gs-cta-content h2 {
+        font-size: 31px;
+    }
+
+    .gs-contact-info,
+    .gs-contact-form {
+        padding: 25px;
+    }
+
+    .gs-footer {
+        padding-top: 55px;
+    }
+}
+
+
+/* ==========================================================
+   34. VERY SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .gs-navbar {
+        min-height: 68px;
+    }
+
+    .gs-mobile-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gs-hero h1 {
+        font-size: 34px;
+    }
+
+    .gs-hero {
+        padding-bottom: 60px;
+    }
+
+    .gs-code-window {
+        border-radius: 15px;
+    }
+
+    .gs-code-body {
+        padding: 18px;
+
+        min-height: 300px;
+    }
+
+    .gs-tech-stack {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gs-stat-card {
+        padding: 22px;
+    }
+
+    .gs-stat-number {
+        font-size: 27px;
+    }
+}
+
+
+/* ==========================================================
+   35. SELECTION
+========================================================== */
+
+.gs-page ::selection {
+    color: #fff;
+
+    background: var(--gs-primary);
+}
+
+
+/* ==========================================================
+   36. CUSTOM SCROLLBAR
+========================================================== */
+
+.gs-page ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gs-page ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.gs-page ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 50px;
+}
+
+.gs-page ::-webkit-scrollbar-thumb:hover {
+    background: var(--gs-primary);
+}
+
+
+/* ==========================================================
+   37. HIDE OLD ARSHA ELEMENTS
+========================================================== */
+
+.gs-page .breadcrumbs,
+.gs-page .page-title,
+.gs-page .portfolio-info,
+.gs-page .portfolio-description {
+    /* intentionally left available for compatibility */
+}
+
+
+/* ==========================================================
+   38. PREVENT OLD HEADER STYLES
+========================================================== */
+
+.gs-page #header.gs-header::before,
+.gs-page #header.gs-header::after {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   39. CONTAINER WIDTH
+========================================================== */
+
+@media (min-width: 1200px) {
+
+    .gs-page .container {
+        max-width: 1240px;
+    }
+}
+
+
+/* ==========================================================
+   40. FINAL POLISH
+========================================================== */
+
+.gs-page section {
+    scroll-margin-top: 80px;
+}
+
+.gs-page .row {
+    --bs-gutter-y: 24px;
+}
+
+.gs-page .text-primary {
+    color: var(--gs-primary) !important;
+}
+
+.gs-page .bg-primary {
+    background-color: var(--gs-primary) !important;
+}
+
+/* ==========================================================
+   GS TECH SOLUTIONS
+   ABOUT PAGE UI
+========================================================== */
+
+
+/* ==========================================================
+   PAGE HERO
+========================================================== */
+
+.gs-about-page-hero {
+    position: relative;
+    padding: 180px 0 110px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(15, 98, 254, 0.14), transparent 32%),
+        radial-gradient(circle at 85% 75%, rgba(0, 200, 150, 0.12), transparent 30%),
+        #07111f;
+}
+
+.gs-about-page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 45px 45px;
+    pointer-events: none;
+}
+
+.gs-about-page-hero::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    right: -180px;
+    top: 80px;
+}
+
+.gs-about-page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.gs-hero-content {
+    max-width: 720px;
+}
+
+.gs-page-hero h1 {
+    color: #ffffff;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 22px 0;
+}
+
+.gs-page-hero h1 span {
+    display: block;
+    color: #3b82f6;
+}
+
+.gs-page-hero p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.08rem;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+
+/* ==========================================================
+   HERO BUTTONS
+========================================================== */
+
+.gs-about-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gs-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 14px 24px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.gs-btn-primary {
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+}
+
+.gs-btn-primary:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.4);
+}
+
+.gs-btn-outline {
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.gs-btn-outline:hover {
+    color: #ffffff;
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.12);
+}
+
+
+/* ==========================================================
+   HERO MINI STATS
+========================================================== */
+
+.gs-hero-mini-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 45px;
+}
+
+.gs-hero-mini-stats > div {
+    position: relative;
+    padding-right: 35px;
+}
+
+.gs-hero-mini-stats > div:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 1px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.gs-hero-mini-stats strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.gs-hero-mini-stats span {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================================
+   ABOUT HERO VISUAL
+========================================================== */
+
+.gs-about-hero-visual {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-hero-glow {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.2);
+    filter: blur(80px);
+}
+
+.gs-about-main-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(12, 25, 43, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+}
+
+.gs-about-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+}
+
+.gs-window-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.gs-window-dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ef4444;
+}
+
+.gs-window-dots span:nth-child(2) {
+    background: #f59e0b;
+}
+
+.gs-window-dots span:nth-child(3) {
+    background: #22c55e;
+}
+
+.gs-about-code {
+    padding: 40px;
+    font-family: "Courier New", monospace;
+    color: #dbeafe;
+    line-height: 2.2;
+    font-size: 0.95rem;
+}
+
+.gs-about-code .indent {
+    padding-left: 25px;
+}
+
+.code-tag {
+    color: #60a5fa;
+}
+
+.gs-about-code strong {
+    color: #34d399;
+}
+
+.gs-code-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 16px 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.gs-code-status span {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.gs-code-status i {
+    color: #22c55e;
+    margin-right: 6px;
+}
+
+
+/* FLOATING CARD */
+
+.gs-about-floating-card {
+    position: absolute;
+    z-index: 4;
+    right: -20px;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 18px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.gs-floating-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+.gs-about-floating-card strong {
+    display: block;
+    color: #0f172a;
+    font-size: 0.9rem;
+}
+
+.gs-about-floating-card span {
+    display: block;
+    color: #64748b;
+    font-size: 0.75rem;
+    margin-top: 3px;
+}
+
+.gs-about-floating-badge {
+    position: absolute;
+    z-index: 4;
+    left: -20px;
+    top: 70px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: #ffffff;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gs-about-floating-badge i {
+    color: #22c55e;
+}
+
+
+/* ==========================================================
+   GENERAL SECTION
+========================================================== */
+
+.gs-section {
+    padding: 110px 0;
+    position: relative;
+}
+
+.gs-section-light {
+    background: #f6f8fc;
+}
+
+.gs-section-heading {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.gs-section-heading p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.gs-section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2563eb;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.gs-section-title {
+    margin: 15px 0 20px;
+    color: #0f172a;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.gs-section-title span {
+    display: block;
+    color: #2563eb;
+}
+
+.gs-section-text {
+    color: #64748b;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================================
+   ABOUT POINTS
+========================================================== */
+
+.gs-about-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.gs-about-points > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.gs-point-icon {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    background: #eff6ff;
+    border-radius: 10px;
+}
+
+.gs-about-points strong {
+    display: block;
+    color: #0f172a;
+    font-size: 0.92rem;
+}
+
+.gs-about-points span {
+    display: block;
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+
+/* ==========================================================
+   VISION GRID
+========================================================== */
+
+.gs-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.gs-vision-card {
+    padding: 28px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    transition: 0.3s ease;
+}
+
+.gs-vision-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.gs-vision-main {
+    grid-column: span 2;
+    color: #ffffff;
+    background:
+        linear-gradient(135deg, #0f172a, #172554);
+}
+
+.gs-vision-main h3,
+.gs-vision-main p,
+.gs-vision-main span {
+    color: #ffffff;
+}
+
+.gs-vision-main p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.gs-vision-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 13px;
+    color: #2563eb;
+    background: #eff6ff;
+    font-size: 1.3rem;
+}
+
+.gs-vision-main .gs-vision-icon {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.gs-vision-card h4,
+.gs-vision-card h3 {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.gs-vision-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   SERVICE CARDS
+========================================================== */
+
+.gs-about-service-card {
+    position: relative;
+    height: 100%;
+    padding: 35px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    transition: 0.35s ease;
+}
+
+.gs-about-service-card:hover {
+    transform: translateY(-8px);
+    border-color: #bfdbfe;
+    box-shadow: 0 25px 55px rgba(15, 23, 42, 0.08);
+}
+
+.gs-card-number {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #dbeafe;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.gs-about-service-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    color: #2563eb;
+    background: #eff6ff;
+    font-size: 1.5rem;
+}
+
+.gs-about-service-card h3 {
+    color: #0f172a;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.gs-about-service-card p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.gs-about-service-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   WHY SECTION
+========================================================== */
+
+.gs-why-highlight {
+    margin-top: 30px;
+    padding: 25px;
+    border-left: 4px solid #2563eb;
+    border-radius: 0 12px 12px 0;
+    background: #eff6ff;
+}
+
+.gs-why-highlight i {
+    color: #2563eb;
+    font-size: 1.4rem;
+}
+
+.gs-why-highlight p {
+    margin: 10px 0 0;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.gs-why-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    transition: 0.3s;
+}
+
+.gs-why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.gs-why-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    color: #2563eb;
+    background: #eff6ff;
+    font-size: 1.3rem;
+}
+
+.gs-why-card h3 {
+    color: #0f172a;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.gs-why-card p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================
+   PROCESS / TECH SECTION
+========================================================== */
+
+.gs-tech {
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.2), transparent 35%),
+        #07111f;
+}
+
+.gs-tech .gs-section-title,
+.gs-tech .gs-section-text {
+    color: #ffffff;
+}
+
+.gs-tech .gs-section-text {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.gs-about-process {
+    margin-top: 35px;
+}
+
+.gs-about-process-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.gs-about-process-number {
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    background: #2563eb;
+}
+
+.gs-about-process-item h4 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.gs-about-process-item p {
+    margin: 5px 0 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* TECH STACK */
+
+.gs-about-tech-box {
+    padding: 35px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gs-about-tech-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.gs-about-tech-header span {
+    color: #60a5fa;
+    font-size: 0.7rem;
+    letter-spacing: 1.4px;
+}
+
+.gs-about-tech-header h3 {
+    margin: 6px 0 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.gs-about-tech-header > i {
+    font-size: 2rem;
+    color: #3b82f6;
+}
+
+.gs-about-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gs-about-tech-grid > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.gs-about-tech-grid > div:hover {
+    background: rgba(37, 99, 235, 0.2);
+}
+
+.gs-about-tech-grid i {
+    color: #60a5fa;
+    font-size: 1.3rem;
+}
+
+.gs-about-tech-grid span {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.gs-about-tech-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.gs-about-tech-footer i {
+    color: #22c55e;
+    margin-right: 8px;
+}
+
+
+/* ==========================================================
+   TEAM
+========================================================== */
+
+.gs-team-card {
+    height: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #edf0f5;
+    transition: 0.35s;
+}
+
+.gs-team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 55px rgba(15, 23, 42, 0.1);
+}
+
+.gs-team-avatar {
+    width: 95px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 800;
+    background:
+        linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+.gs-team-role {
+    color: #2563eb;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.gs-team-card h3 {
+    margin: 10px 0 5px;
+    color: #0f172a;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.gs-team-speciality {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.gs-team-card p {
+    margin: 20px 0;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.gs-team-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gs-team-social a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #2563eb;
+    background: #eff6ff;
+    transition: 0.3s;
+}
+
+.gs-team-social a:hover {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.gs-cta-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.gs-cta-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px;
+    overflow: hidden;
+    border-radius: 24px;
+    color: #ffffff;
+    background:
+        linear-gradient(135deg, #0f172a, #172554);
+}
+
+.gs-cta-box::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: -120px;
+    top: -150px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.25);
+    filter: blur(30px);
+}
+
+.gs-cta-box > * {
+    position: relative;
+    z-index: 2;
+}
+
+.gs-cta-box h2 {
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+}
+
+.gs-cta-box h2 span {
+    display: block;
+    color: #60a5fa;
+}
+
+.gs-cta-box p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.gs-btn-light {
+    white-space: nowrap;
+    color: #0f172a;
+    background: #ffffff;
+}
+
+.gs-btn-light:hover {
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 991px) {
+
+    .gs-about-page-hero {
+        padding: 150px 0 90px;
+    }
+
+    .gs-about-hero-visual {
+        margin-top: 40px;
+    }
+
+    .gs-section {
+        padding: 80px 0;
+    }
+
+    .gs-cta-box {
+        padding: 45px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .gs-page-hero h1 {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+
+    .gs-about-hero-actions {
+        flex-direction: column;
+    }
+
+    .gs-about-hero-actions .gs-btn {
+        width: 100%;
+    }
+
+    .gs-hero-mini-stats {
+        gap: 20px;
+    }
+
+    .gs-hero-mini-stats > div {
+        padding-right: 15px;
+    }
+
+    .gs-about-points {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-vision-main {
+        grid-column: span 1;
+    }
+
+    .gs-about-floating-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 20px;
+    }
+
+    .gs-about-floating-badge {
+        left: auto;
+        right: 0;
+        top: 20px;
+    }
+
+    .gs-about-tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-about-tech-box {
+        padding: 25px;
+    }
+
+    .gs-cta-box {
+        padding: 35px 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .gs-section {
+        padding: 65px 0;
+    }
+
+    .gs-about-main-card {
+        border-radius: 15px;
+    }
+
+    .gs-about-code {
+        padding: 25px;
+        font-size: 0.8rem;
+    }
+
+    .gs-code-status {
+        padding: 15px;
+    }
+
+    .gs-hero-mini-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gs-hero-mini-stats > div::after {
+        display: none;
+    }
+
+}
+/* ==========================================================
+   GS TECH SOLUTIONS
+   SERVICES PAGE - PREMIUM UI
+========================================================== */
+
+
+/* ==========================================================
+   SERVICES HERO
+========================================================== */
+
+.gs-services-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 155px 0 95px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.13), transparent 32%),
+        radial-gradient(circle at 10% 90%, rgba(6, 182, 212, 0.08), transparent 30%),
+        #f8fafc;
+}
+
+.gs-services-page-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    top: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.gs-services-page-hero h1 {
+    max-width: 780px;
+    margin: 22px 0;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+    color: #071a2b;
+}
+
+.gs-services-page-hero h1 span {
+    display: block;
+    color: var(--gs-primary, #2563eb);
+}
+
+.gs-services-page-hero p {
+    max-width: 690px;
+    margin-bottom: 30px;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.gs-service-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.gs-service-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.gs-service-trust-row div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gs-service-trust-row i {
+    color: #22c55e;
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   HERO DASHBOARD VISUAL
+========================================================== */
+
+.gs-services-hero-visual {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-service-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.gs-service-orb.orb-one {
+    width: 260px;
+    height: 260px;
+    top: 35px;
+    right: 25px;
+    background: rgba(37, 99, 235, 0.09);
+}
+
+.gs-service-orb.orb-two {
+    width: 160px;
+    height: 160px;
+    bottom: 20px;
+    left: 10px;
+    background: rgba(6, 182, 212, 0.10);
+}
+
+.gs-services-dashboard {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 470px);
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow:
+        0 30px 70px rgba(15, 23, 42, 0.13),
+        0 8px 25px rgba(37, 99, 235, 0.08);
+    transform: rotate(1deg);
+    transition: all 0.4s ease;
+}
+
+.gs-services-dashboard:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.gs-dashboard-top {
+    height: 52px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #64748b;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.gs-dashboard-top .gs-window-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.gs-dashboard-top .gs-window-dots span {
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.gs-dashboard-top > i {
+    margin-left: auto;
+    font-size: 15px;
+}
+
+.gs-dashboard-content {
+    padding: 26px;
+}
+
+.gs-dashboard-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.gs-dashboard-heading small {
+    color: #94a3b8;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.gs-dashboard-heading h3 {
+    margin: 5px 0 0;
+    color: #0f172a;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.gs-dashboard-heading h3 span {
+    color: #2563eb;
+}
+
+.gs-dashboard-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 9px;
+    border: 1px solid #dcfce7;
+    border-radius: 20px;
+    background: #f0fdf4;
+    color: #16a34a;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.gs-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.gs-dashboard-grid > div {
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.gs-dashboard-grid > div:hover {
+    border-color: rgba(37, 99, 235, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.gs-dashboard-grid i {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 16px;
+}
+
+.gs-dashboard-grid span,
+.gs-dashboard-grid strong {
+    display: block;
+}
+
+.gs-dashboard-grid span {
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+.gs-dashboard-grid strong {
+    margin-top: 3px;
+    color: #1e293b;
+    font-size: 12px;
+}
+
+.gs-dashboard-progress {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.progress-label strong {
+    color: #2563eb;
+}
+
+.gs-dashboard-progress .progress {
+    height: 6px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e2e8f0;
+}
+
+.gs-dashboard-progress .progress-bar {
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #06b6d4
+    );
+}
+
+
+/* ==========================================================
+   FLOATING HERO CARD
+========================================================== */
+
+.gs-service-floating-card {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    max-width: 250px;
+    padding: 13px 16px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.94);
+    box-shadow: 0 18px 45px rgba(15,23,42,0.12);
+    backdrop-filter: blur(12px);
+}
+
+.gs-service-floating-card .gs-floating-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: #fff;
+}
+
+.gs-service-floating-card strong,
+.gs-service-floating-card span {
+    display: block;
+}
+
+.gs-service-floating-card strong {
+    color: #0f172a;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.gs-service-floating-card span {
+    margin-top: 2px;
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+
+/* ==========================================================
+   SERVICES INTRO
+========================================================== */
+
+.gs-services-intro {
+    padding-top: 80px;
+    padding-bottom: 65px;
+}
+
+.gs-services-intro .gs-section-title {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   SERVICE DETAIL CARDS
+========================================================== */
+
+.gs-services-list-section {
+    padding-top: 95px;
+    padding-bottom: 105px;
+}
+
+.gs-service-detail-card {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    padding: 32px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.045);
+    transition: all 0.4s ease;
+}
+
+.gs-service-detail-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #06b6d4
+    );
+    transition: width 0.4s ease;
+}
+
+.gs-service-detail-card:hover {
+    border-color: rgba(37, 99, 235, 0.16);
+    transform: translateY(-7px);
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.09),
+        0 5px 18px rgba(37, 99, 235, 0.05);
+}
+
+.gs-service-detail-card:hover::before {
+    width: 100%;
+}
+
+.gs-service-detail-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gs-service-number {
+    color: #cbd5e1;
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.gs-service-detail-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #ecfeff
+    );
+    color: #2563eb;
+    font-size: 23px;
+    transition: all 0.3s ease;
+}
+
+.gs-service-detail-card:hover .gs-service-detail-icon {
+    color: #fff;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.gs-service-label {
+    display: inline-block;
+    margin-top: 27px;
+    color: #2563eb;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.gs-service-detail-card h3 {
+    margin: 8px 0 12px;
+    color: #0f172a;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.gs-service-detail-card p {
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.gs-service-feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    margin-bottom: 25px;
+}
+
+.gs-service-feature-list span {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    color: #475569;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.gs-service-feature-list i {
+    flex: 0 0 auto;
+    margin-top: 1px;
+    color: #22c55e;
+    font-size: 13px;
+}
+
+.gs-service-detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #2563eb !important;
+    font-size: 11px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+.gs-service-detail-link i {
+    transition: transform 0.3s ease;
+}
+
+.gs-service-detail-link:hover {
+    color: #0f172a !important;
+}
+
+.gs-service-detail-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+/* FEATURED CARD */
+
+.gs-service-featured-card {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(37, 99, 235, 0.08),
+            transparent 30%
+        ),
+        #fff;
+}
+
+.gs-service-featured-card .gs-service-number {
+    color: #93c5fd;
+}
+
+
+/* ==========================================================
+   BUSINESS STRIP
+========================================================== */
+
+.gs-service-business-strip {
+    padding: 0 0 95px;
+    background: #f8fafc;
+}
+
+.gs-business-strip-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 28px 35px;
+    overflow: hidden;
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            #0b1f36,
+            #0f3555
+        );
+    box-shadow: 0 20px 50px rgba(7, 26, 43, 0.15);
+}
+
+.gs-business-strip-inner::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -80px;
+    top: -110px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.gs-business-strip-icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(96,165,250,0.2);
+    border-radius: 13px;
+    background: rgba(37,99,235,0.15);
+    color: #60a5fa;
+    font-size: 23px;
+}
+
+.gs-business-strip-inner > div:nth-child(2) {
+    flex: 1;
+}
+
+.gs-business-strip-inner span {
+    color: #60a5fa;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.gs-business-strip-inner h3 {
+    margin: 5px 0 0;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.gs-business-strip-inner h3 strong {
+    color: #93c5fd;
+}
+
+
+/* ==========================================================
+   PROCESS SECTION
+========================================================== */
+
+.gs-service-process-section {
+    padding-top: 105px;
+    padding-bottom: 105px;
+}
+
+.gs-services-process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 55px;
+}
+
+.gs-services-process-card {
+    position: relative;
+    min-height: 225px;
+    padding: 24px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 7px 25px rgba(15,23,42,0.04);
+    transition: all 0.35s ease;
+}
+
+.gs-services-process-card:hover {
+    border-color: rgba(37,99,235,0.18);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15,23,42,0.08);
+}
+
+.gs-process-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gs-process-top span {
+    color: #cbd5e1;
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.gs-process-top i {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 16px;
+}
+
+.gs-services-process-card h3 {
+    margin: 28px 0 9px;
+    color: #0f172a;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.gs-services-process-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   TECHNOLOGY SECTION
+========================================================== */
+
+.gs-services-tech {
+    overflow: hidden;
+}
+
+.gs-services-tech-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.gs-services-tech-points div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #cbd5e1;
+    font-size: 11px;
+}
+
+.gs-services-tech-points i {
+    color: #22c55e;
+    font-size: 14px;
+}
+
+.gs-services-tech-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.035);
+}
+
+.gs-services-tech-item {
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 13px;
+    background: rgba(255,255,255,0.035);
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+}
+
+.gs-services-tech-item:hover {
+    border-color: rgba(96,165,250,0.25);
+    background: rgba(37,99,235,0.10);
+    transform: translateY(-4px);
+}
+
+.gs-services-tech-item .gs-tech-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(37,99,235,0.12);
+    color: #60a5fa;
+    font-size: 19px;
+}
+
+.gs-services-tech-item span {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   FINAL CTA
+========================================================== */
+
+.gs-services-final-cta {
+    padding-top: 100px;
+}
+
+.gs-services-final-cta .gs-cta-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.gs-services-final-cta .gs-cta-box::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -100px;
+    top: -150px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.gs-services-final-cta .gs-cta-box::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 35%;
+    bottom: -130px;
+    border-radius: 50%;
+    background: rgba(6,182,212,0.08);
+}
+
+.gs-services-final-cta .gs-cta-box > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==========================================================
+   SERVICE PAGE BUTTONS
+========================================================== */
+
+.gs-services-page-hero .gs-btn,
+.gs-service-business-strip .gs-btn,
+.gs-services-final-cta .gs-btn {
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   RESPONSIVE - TABLET
+========================================================== */
+
+@media (max-width: 1199px) {
+
+    .gs-services-page-hero {
+        padding-top: 135px;
+    }
+
+    .gs-services-process-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gs-services-process-card:last-child {
+        grid-column: span 1;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .gs-services-page-hero {
+        padding: 125px 0 75px;
+    }
+
+    .gs-services-page-hero h1 {
+        font-size: 48px;
+    }
+
+    .gs-services-hero-visual {
+        min-height: 410px;
+        margin-top: 10px;
+    }
+
+    .gs-service-floating-card {
+        left: 5%;
+        bottom: 20px;
+    }
+
+    .gs-business-strip-inner {
+        flex-wrap: wrap;
+    }
+
+    .gs-business-strip-inner > div:nth-child(2) {
+        min-width: calc(100% - 80px);
+    }
+
+    .gs-business-strip-inner > .gs-btn {
+        margin-left: 74px;
+    }
+
+    .gs-services-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gs-services-tech-box {
+        margin-top: 15px;
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE - MOBILE
+========================================================== */
+
+@media (max-width: 767px) {
+
+    .gs-services-page-hero {
+        padding: 110px 0 60px;
+    }
+
+    .gs-services-page-hero h1 {
+        margin-top: 18px;
+        font-size: 37px;
+        line-height: 1.12;
+        letter-spacing: -1.4px;
+    }
+
+    .gs-services-page-hero p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .gs-service-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gs-service-hero-actions .gs-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .gs-service-trust-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gs-services-hero-visual {
+        min-height: 350px;
+        margin-top: 15px;
+    }
+
+    .gs-services-dashboard {
+        width: 94%;
+        transform: none;
+    }
+
+    .gs-dashboard-content {
+        padding: 18px;
+    }
+
+    .gs-dashboard-heading h3 {
+        font-size: 17px;
+    }
+
+    .gs-dashboard-grid {
+        gap: 7px;
+    }
+
+    .gs-dashboard-grid > div {
+        padding: 11px;
+    }
+
+    .gs-dashboard-grid i {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .gs-service-floating-card {
+        left: 0;
+        bottom: 0;
+        max-width: 215px;
+        padding: 10px 12px;
+    }
+
+    .gs-service-floating-card .gs-floating-icon {
+        width: 33px;
+        height: 33px;
+        flex-basis: 33px;
+    }
+
+    .gs-services-intro {
+        padding-top: 60px;
+        padding-bottom: 45px;
+    }
+
+    .gs-services-list-section {
+        padding-top: 65px;
+        padding-bottom: 70px;
+    }
+
+    .gs-service-detail-card {
+        padding: 25px;
+    }
+
+    .gs-service-detail-card h3 {
+        font-size: 20px;
+    }
+
+    .gs-service-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-service-business-strip {
+        padding-bottom: 70px;
+    }
+
+    .gs-business-strip-inner {
+        align-items: flex-start;
+        padding: 24px;
+        gap: 14px;
+    }
+
+    .gs-business-strip-icon {
+        width: 45px;
+        height: 45px;
+        flex-basis: 45px;
+    }
+
+    .gs-business-strip-inner > div:nth-child(2) {
+        min-width: calc(100% - 60px);
+    }
+
+    .gs-business-strip-inner h3 {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .gs-business-strip-inner > .gs-btn {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .gs-service-process-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gs-services-process-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 40px;
+    }
+
+    .gs-services-process-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .gs-services-process-card h3 {
+        margin-top: 20px;
+    }
+
+    .gs-services-tech {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gs-services-tech-points {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-services-tech-box {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .gs-services-tech-item {
+        min-height: 95px;
+    }
+
+    .gs-services-final-cta {
+        padding-top: 70px;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .gs-services-page-hero h1 {
+        font-size: 32px;
+    }
+
+    .gs-dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gs-service-detail-card {
+        padding: 22px;
+    }
+
+    .gs-service-number {
+        font-size: 27px;
+    }
+
+    .gs-service-detail-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .gs-services-tech-box {
+        gap: 8px;
+    }
+
+}
+/* ==========================================================
+   GS TECH SOLUTIONS
+   SOLUTIONS PAGE
+========================================================== */
+
+
+/* ==========================================================
+   SOLUTIONS HERO
+========================================================== */
+
+.gs-solutions-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 155px 0 95px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.13), transparent 32%),
+        radial-gradient(circle at 10% 90%, rgba(6, 182, 212, 0.08), transparent 30%),
+        #f8fafc;
+}
+
+.gs-solutions-page-hero h1 {
+    max-width: 780px;
+    margin: 22px 0;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+    color: #071a2b;
+}
+
+.gs-solutions-page-hero h1 span {
+    display: block;
+    color: var(--gs-primary, #2563eb);
+}
+
+.gs-solutions-page-hero p {
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.gs-solutions-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.gs-solutions-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.gs-solutions-trust-row div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gs-solutions-trust-row i {
+    color: #22c55e;
+}
+
+
+/* ==========================================================
+   SOLUTIONS HERO VISUAL
+========================================================== */
+
+.gs-solutions-hero-visual {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-solution-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.gs-solution-circle.circle-one {
+    width: 280px;
+    height: 280px;
+    right: 0;
+    top: 30px;
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.gs-solution-circle.circle-two {
+    width: 160px;
+    height: 160px;
+    left: 0;
+    bottom: 30px;
+    background: rgba(6, 182, 212, 0.09);
+}
+
+.gs-industry-dashboard {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 470px);
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 20px;
+    background: rgba(255,255,255,.95);
+    box-shadow:
+        0 30px 70px rgba(15,23,42,.13),
+        0 8px 25px rgba(37,99,235,.08);
+    transform: rotate(1deg);
+    transition: .4s ease;
+}
+
+.gs-industry-dashboard:hover {
+    transform: rotate(0) translateY(-5px);
+}
+
+.gs-industry-dashboard-top {
+    height: 52px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #64748b;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.gs-industry-dashboard-top .gs-window-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.gs-industry-dashboard-top .gs-window-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.gs-industry-dashboard-top > i {
+    margin-left: auto;
+}
+
+.gs-industry-dashboard-body {
+    padding: 25px;
+}
+
+.gs-dashboard-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.gs-dashboard-title-row small {
+    color: #94a3b8;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.gs-dashboard-title-row h3 {
+    margin: 5px 0 0;
+    color: #0f172a;
+    font-family: "Poppins", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.gs-dashboard-title-row h3 span {
+    color: #2563eb;
+}
+
+.gs-dashboard-live {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: #f0fdf4;
+    color: #16a34a;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.gs-dashboard-live i {
+    font-size: 6px;
+}
+
+.gs-industry-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.gs-industry-mini-grid div {
+    min-height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    color: #64748b;
+    transition: .3s ease;
+}
+
+.gs-industry-mini-grid div:hover {
+    transform: translateY(-3px);
+    border-color: rgba(37,99,235,.2);
+}
+
+.gs-industry-mini-grid i {
+    color: #2563eb;
+    font-size: 17px;
+}
+
+.gs-industry-mini-grid span {
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.gs-dashboard-workflow {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 11px;
+    background: #f8fafc;
+}
+
+.workflow-heading {
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.workflow-heading strong {
+    color: #22c55e;
+}
+
+.workflow-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.workflow-line span {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #fff;
+    color: #2563eb;
+    box-shadow: 0 3px 10px rgba(15,23,42,.06);
+}
+
+.workflow-line > i {
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+.gs-solution-floating-card {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 16px;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 14px;
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 18px 45px rgba(15,23,42,.12);
+    backdrop-filter: blur(12px);
+}
+
+.gs-solution-floating-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#2563eb,#06b6d4);
+    color: #fff;
+}
+
+.gs-solution-floating-card strong,
+.gs-solution-floating-card span {
+    display: block;
+}
+
+.gs-solution-floating-card strong {
+    color: #0f172a;
+    font-size: 11px;
+}
+
+.gs-solution-floating-card span {
+    margin-top: 2px;
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+
+/* ==========================================================
+   INTRO
+========================================================== */
+
+.gs-solutions-intro {
+    padding-top: 80px;
+    padding-bottom: 65px;
+}
+
+
+/* ==========================================================
+   INDUSTRY CARDS
+========================================================== */
+
+.gs-industry-solutions-section {
+    padding-top: 95px;
+    padding-bottom: 105px;
+}
+
+.gs-industry-card {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(15,23,42,.045);
+    transition: all .4s ease;
+}
+
+.gs-industry-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg,#2563eb,#06b6d4);
+    transition: width .4s ease;
+}
+
+.gs-industry-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(37,99,235,.17);
+    box-shadow: 0 20px 50px rgba(15,23,42,.09);
+}
+
+.gs-industry-card:hover::before {
+    width: 100%;
+}
+
+.gs-industry-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gs-industry-number {
+    color: #cbd5e1;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.gs-industry-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg,#eff6ff,#ecfeff);
+    color: #2563eb;
+    font-size: 22px;
+    transition: .3s ease;
+}
+
+.gs-industry-card:hover .gs-industry-icon {
+    color: #fff;
+    background: linear-gradient(135deg,#2563eb,#06b6d4);
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.gs-industry-label {
+    display: inline-block;
+    margin-top: 25px;
+    color: #2563eb;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.gs-industry-card h3 {
+    margin: 7px 0 12px;
+    color: #0f172a;
+    font-family: "Poppins", sans-serif;
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.gs-industry-card p {
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.gs-industry-features {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 9px;
+    margin-bottom: 24px;
+}
+
+.gs-industry-features span {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    color: #475569;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.gs-industry-features i {
+    color: #22c55e;
+    font-size: 13px;
+}
+
+.gs-industry-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #2563eb !important;
+    font-size: 10px;
+    font-weight: 800;
+    transition: .3s ease;
+}
+
+.gs-industry-link i {
+    transition: .3s ease;
+}
+
+.gs-industry-link:hover {
+    color: #0f172a !important;
+}
+
+.gs-industry-link:hover i {
+    transform: translate(3px,-3px);
+}
+
+.gs-industry-featured {
+    background:
+        radial-gradient(circle at 90% 10%,rgba(37,99,235,.08),transparent 30%),
+        #fff;
+}
+
+
+/* ==========================================================
+   PLATFORM SECTION
+========================================================== */
+
+.gs-solutions-platform {
+    overflow: hidden;
+}
+
+.gs-platform-visual {
+    position: relative;
+    padding: 15px;
+}
+
+.gs-platform-window {
+    overflow: hidden;
+    border: 1px solid rgba(148,163,184,.2);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 25px 60px rgba(15,23,42,.1);
+}
+
+.gs-platform-window-top {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    color: #64748b;
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.gs-platform-window-top .gs-window-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.gs-platform-window-top .gs-window-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.gs-platform-content {
+    display: flex;
+    min-height: 320px;
+}
+
+.gs-platform-sidebar {
+    width: 55px;
+    padding: 17px 9px;
+    border-right: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.gs-platform-sidebar div {
+    width: 37px;
+    height: 37px;
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.gs-platform-sidebar div.active {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.gs-platform-main {
+    flex: 1;
+    padding: 25px;
+}
+
+.gs-platform-main > small {
+    color: #94a3b8;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.gs-platform-main h4 {
+    margin: 5px 0 20px;
+    color: #0f172a;
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.gs-platform-main h4 span {
+    color: #2563eb;
+}
+
+.gs-platform-stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+}
+
+.gs-platform-stats div {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+}
+
+.gs-platform-stats span,
+.gs-platform-stats strong {
+    display: block;
+}
+
+.gs-platform-stats span {
+    color: #94a3b8;
+    font-size: 8px;
+}
+
+.gs-platform-stats strong {
+    margin-top: 4px;
+    color: #0f172a;
+    font-size: 15px;
+}
+
+.gs-platform-chart {
+    height: 115px;
+    margin-top: 18px;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.chart-bars {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.chart-bars span {
+    width: 9%;
+    min-height: 15px;
+    border-radius: 5px 5px 2px 2px;
+    background: linear-gradient(to top,#2563eb,#06b6d4);
+}
+
+
+/* PLATFORM POINTS */
+
+.gs-platform-points {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.gs-platform-points > div {
+    display: flex;
+    gap: 12px;
+}
+
+.gs-platform-points > div > i {
+    color: #22c55e;
+    font-size: 16px;
+}
+
+.gs-platform-points strong,
+.gs-platform-points span {
+    display: block;
+}
+
+.gs-platform-points strong {
+    color: #0f172a;
+    font-size: 12px;
+}
+
+.gs-platform-points span {
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   WORKFLOW
+========================================================== */
+
+.gs-solutions-workflow {
+    padding-top: 100px;
+    padding-bottom: 105px;
+}
+
+.gs-solution-workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 14px;
+    margin-top: 55px;
+}
+
+.gs-solution-workflow-card {
+    position: relative;
+    min-height: 230px;
+    padding: 24px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #fff;
+    transition: .35s ease;
+}
+
+.gs-solution-workflow-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37,99,235,.18);
+    box-shadow: 0 18px 40px rgba(15,23,42,.08);
+}
+
+.gs-workflow-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #e2e8f0;
+    font-family: "Poppins",sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.gs-workflow-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.gs-solution-workflow-card h3 {
+    margin: 25px 0 9px;
+    color: #0f172a;
+    font-family: "Poppins",sans-serif;
+    font-size: 17px;
+}
+
+.gs-solution-workflow-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   CUSTOM SOLUTION
+========================================================== */
+
+.gs-solutions-custom {
+    padding: 0 0 95px;
+    background: #f8fafc;
+}
+
+.gs-custom-solution-box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 30px 35px;
+    border-radius: 19px;
+    background: linear-gradient(135deg,#0b1f36,#0f3555);
+    box-shadow: 0 20px 50px rgba(7,26,43,.15);
+}
+
+.gs-custom-solution-box::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: -100px;
+    top: -140px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+}
+
+.gs-custom-solution-icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(37,99,235,.14);
+    color: #60a5fa;
+    font-size: 22px;
+}
+
+.gs-custom-solution-content {
+    flex: 1;
+}
+
+.gs-custom-solution-content > span {
+    color: #60a5fa;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.gs-custom-solution-content h2 {
+    margin: 5px 0 6px;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+}
+
+.gs-custom-solution-content h2 strong {
+    color: #93c5fd;
+}
+
+.gs-custom-solution-content p {
+    max-width: 650px;
+    margin: 0;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.gs-custom-solution-action {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==========================================================
+   FINAL CTA
+========================================================== */
+
+.gs-solutions-final-cta {
+    padding-top: 100px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1199px) {
+
+    .gs-solution-workflow-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .gs-solutions-page-hero {
+        padding: 125px 0 75px;
+    }
+
+    .gs-solutions-page-hero h1 {
+        font-size: 48px;
+    }
+
+    .gs-solutions-hero-visual {
+        min-height: 410px;
+    }
+
+    .gs-solution-floating-card {
+        left: 5%;
+        bottom: 15px;
+    }
+
+    .gs-solution-workflow-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gs-custom-solution-box {
+        flex-wrap: wrap;
+    }
+
+    .gs-custom-solution-content {
+        min-width: calc(100% - 75px);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .gs-solutions-page-hero {
+        padding: 110px 0 60px;
+    }
+
+    .gs-solutions-page-hero h1 {
+        font-size: 37px;
+        letter-spacing: -1.4px;
+    }
+
+    .gs-solutions-page-hero p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .gs-solutions-hero-actions {
+        flex-direction: column;
+    }
+
+    .gs-solutions-hero-actions .gs-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gs-solutions-trust-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gs-solutions-hero-visual {
+        min-height: 350px;
+    }
+
+    .gs-industry-dashboard {
+        width: 94%;
+        transform: none;
+    }
+
+    .gs-industry-dashboard-body {
+        padding: 18px;
+    }
+
+    .gs-industry-mini-grid {
+        gap: 6px;
+    }
+
+    .gs-industry-mini-grid div {
+        min-height: 65px;
+    }
+
+    .gs-solution-floating-card {
+        left: 0;
+        bottom: 0;
+        padding: 10px 12px;
+    }
+
+    .gs-solutions-intro {
+        padding-top: 60px;
+        padding-bottom: 45px;
+    }
+
+    .gs-industry-solutions-section {
+        padding-top: 65px;
+        padding-bottom: 70px;
+    }
+
+    .gs-industry-card {
+        padding: 25px;
+    }
+
+    .gs-industry-features {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-solutions-platform {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gs-platform-visual {
+        padding: 0;
+    }
+
+    .gs-platform-content {
+        min-height: 280px;
+    }
+
+    .gs-platform-main {
+        padding: 18px;
+    }
+
+    .gs-platform-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-platform-chart {
+        display: none;
+    }
+
+    .gs-solutions-workflow {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gs-solution-workflow-grid {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+    .gs-solution-workflow-card {
+        min-height: auto;
+    }
+
+    .gs-solutions-custom {
+        padding-bottom: 70px;
+    }
+
+    .gs-custom-solution-box {
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .gs-custom-solution-content {
+        min-width: calc(100% - 65px);
+    }
+
+    .gs-custom-solution-content h2 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .gs-custom-solution-action {
+        width: 100%;
+    }
+
+    .gs-custom-solution-action .gs-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gs-solutions-final-cta {
+        padding-top: 70px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .gs-solutions-page-hero h1 {
+        font-size: 32px;
+    }
+
+    .gs-industry-mini-grid span {
+        font-size: 8px;
+    }
+
+    .gs-industry-card {
+        padding: 22px;
+    }
+
+    .gs-industry-number {
+        font-size: 27px;
+    }
+
+    .gs-industry-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+}
+/* ==========================================================
+   GS TECH SOLUTIONS
+   PROJECTS PAGE
+========================================================== */
+
+
+/* ==========================================================
+   PROJECT HERO
+========================================================== */
+
+.gs-projects-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 155px 0 95px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(37,99,235,.13), transparent 32%),
+        radial-gradient(circle at 10% 90%, rgba(6,182,212,.08), transparent 30%),
+        #f8fafc;
+}
+
+.gs-projects-page-hero h1 {
+    max-width: 760px;
+    margin: 22px 0;
+    color: #071a2b;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(42px,5vw,66px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+}
+
+.gs-projects-page-hero h1 span {
+    display: block;
+    color: var(--gs-primary,#2563eb);
+}
+
+.gs-projects-page-hero p {
+    max-width: 680px;
+    margin-bottom: 30px;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.gs-projects-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.gs-projects-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.gs-projects-trust-row div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gs-projects-trust-row i {
+    color: #22c55e;
+}
+
+
+/* ==========================================================
+   PROJECT HERO BROWSER
+========================================================== */
+
+.gs-projects-hero-visual {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-project-orb {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.project-orb-one {
+    width: 290px;
+    height: 290px;
+    right: -10px;
+    top: 20px;
+    background: rgba(37,99,235,.08);
+}
+
+.project-orb-two {
+    width: 150px;
+    height: 150px;
+    left: 0;
+    bottom: 20px;
+    background: rgba(6,182,212,.09);
+}
+
+.gs-project-browser {
+    position: relative;
+    z-index: 2;
+    width: min(100%,470px);
+    overflow: hidden;
+    border: 1px solid rgba(148,163,184,.2);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow:
+        0 30px 70px rgba(15,23,42,.13),
+        0 8px 25px rgba(37,99,235,.07);
+    transform: rotate(1deg);
+    transition: .4s ease;
+}
+
+.gs-project-browser:hover {
+    transform: rotate(0) translateY(-5px);
+}
+
+.gs-project-browser-top {
+    height: 52px;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    color: #64748b;
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.gs-project-browser-top .gs-window-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.gs-project-browser-top .gs-window-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.gs-browser-address {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.gs-project-browser-top > i {
+    font-size: 13px;
+}
+
+.gs-project-browser-body {
+    display: flex;
+    min-height: 330px;
+}
+
+.gs-browser-sidebar {
+    width: 53px;
+    padding: 16px 8px;
+    border-right: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.gs-browser-sidebar div {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    color: #94a3b8;
+}
+
+.gs-browser-sidebar div.active {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.gs-browser-dashboard {
+    flex: 1;
+    padding: 25px;
+}
+
+.gs-browser-dashboard > small {
+    color: #94a3b8;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.gs-browser-dashboard h3 {
+    margin: 5px 0 20px;
+    color: #0f172a;
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.gs-browser-dashboard h3 span {
+    color: #2563eb;
+}
+
+.gs-browser-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+}
+
+.gs-browser-stat-grid div {
+    padding: 11px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+}
+
+.gs-browser-stat-grid span,
+.gs-browser-stat-grid strong {
+    display: block;
+}
+
+.gs-browser-stat-grid span {
+    color: #94a3b8;
+    font-size: 8px;
+}
+
+.gs-browser-stat-grid strong {
+    margin-top: 4px;
+    color: #0f172a;
+    font-size: 14px;
+}
+
+.gs-browser-chart {
+    margin-top: 17px;
+    padding: 13px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.gs-browser-chart-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.gs-project-bars {
+    height: 100px;
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.gs-project-bars span {
+    width: 9%;
+    min-height: 12px;
+    border-radius: 5px 5px 2px 2px;
+    background: linear-gradient(to top,#2563eb,#06b6d4);
+}
+
+.gs-project-floating-card {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 16px;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 14px;
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 18px 45px rgba(15,23,42,.12);
+    backdrop-filter: blur(12px);
+}
+
+.gs-project-floating-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#2563eb,#06b6d4);
+    color: #fff;
+}
+
+.gs-project-floating-card strong,
+.gs-project-floating-card span {
+    display: block;
+}
+
+.gs-project-floating-card strong {
+    color: #0f172a;
+    font-size: 11px;
+}
+
+.gs-project-floating-card span {
+    margin-top: 2px;
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+
+/* ==========================================================
+   PROJECT INTRO
+========================================================== */
+
+.gs-projects-intro {
+    padding-top: 80px;
+    padding-bottom: 65px;
+}
+
+
+/* ==========================================================
+   PROJECT LIST
+========================================================== */
+
+.gs-projects-list-section {
+    padding-top: 95px;
+    padding-bottom: 105px;
+}
+
+
+/* ==========================================================
+   FILTER
+========================================================== */
+
+.gs-project-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 42px 0 35px;
+}
+
+.gs-project-filter button {
+    padding: 9px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    background: #fff;
+    color: #64748b;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.gs-project-filter button:hover,
+.gs-project-filter button.active {
+    border-color: #2563eb;
+    background: #2563eb;
+    color: #fff;
+}
+
+
+/* ==========================================================
+   PROJECT CARD
+========================================================== */
+
+.gs-project-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(15,23,42,.045);
+    transition: .4s ease;
+}
+
+.gs-project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(37,99,235,.18);
+    box-shadow: 0 22px 50px rgba(15,23,42,.1);
+}
+
+
+/* ==========================================================
+   PROJECT PREVIEW
+========================================================== */
+
+.gs-project-preview {
+    height: 225px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 10%,rgba(37,99,235,.13),transparent 35%),
+        #f1f5f9;
+}
+
+
+/* WEBSITE */
+
+.gs-project-preview-browser {
+    width: 90%;
+    height: 175px;
+    overflow: hidden;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.preview-top {
+    height: 22px;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background: #f8fafc;
+}
+
+.preview-top span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.preview-website {
+    padding: 14px;
+}
+
+.preview-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.preview-nav strong {
+    color: #2563eb;
+    font-size: 8px;
+}
+
+.preview-nav div {
+    display: flex;
+    gap: 4px;
+}
+
+.preview-nav div span {
+    width: 18px;
+    height: 3px;
+    border-radius: 4px;
+    background: #cbd5e1;
+}
+
+.preview-hero-lines {
+    margin-top: 17px;
+}
+
+.preview-hero-lines strong,
+.preview-hero-lines span {
+    display: block;
+    border-radius: 5px;
+}
+
+.preview-hero-lines strong {
+    width: 55%;
+    height: 10px;
+    background: #1e293b;
+}
+
+.preview-hero-lines span {
+    width: 75%;
+    height: 4px;
+    margin-top: 6px;
+    background: #cbd5e1;
+}
+
+.preview-hero-lines span:nth-child(3) {
+    width: 58%;
+}
+
+.preview-hero-lines div {
+    width: 50px;
+    height: 15px;
+    margin-top: 11px;
+    border-radius: 4px;
+    background: #2563eb;
+}
+
+.preview-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.preview-cards span {
+    height: 34px;
+    border-radius: 5px;
+    background: #eff6ff;
+}
+
+
+/* SOFTWARE */
+
+.software-preview {
+    background:
+        radial-gradient(circle at 20% 20%,rgba(6,182,212,.12),transparent 35%),
+        #eef2ff;
+}
+
+.gs-software-window {
+    width: 90%;
+    height: 175px;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.software-sidebar {
+    width: 42px;
+    padding: 10px 8px;
+    background: #0f172a;
+}
+
+.software-sidebar strong {
+    display: block;
+    margin-bottom: 18px;
+    color: #60a5fa;
+    text-align: center;
+    font-size: 9px;
+}
+
+.software-sidebar span {
+    width: 25px;
+    height: 7px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 3px;
+    background: #334155;
+}
+
+.software-sidebar span.active {
+    background: #2563eb;
+}
+
+.software-content {
+    flex: 1;
+    padding: 17px;
+}
+
+.software-content small {
+    color: #94a3b8;
+    font-size: 6px;
+}
+
+.software-content h4 {
+    margin: 4px 0 15px;
+    color: #1e293b;
+    font-size: 12px;
+}
+
+.software-stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+
+.software-stats span {
+    height: 35px;
+    display: block;
+    border-radius: 5px;
+    background: #eff6ff;
+}
+
+.software-table {
+    margin-top: 12px;
+}
+
+.software-table div {
+    height: 8px;
+    margin-bottom: 7px;
+    border-radius: 3px;
+    background: #e2e8f0;
+}
+
+.software-table div:nth-child(2) {
+    width: 80%;
+}
+
+.software-table div:nth-child(3) {
+    width: 65%;
+}
+
+.software-table div:nth-child(4) {
+    width: 88%;
+}
+
+
+/* ERP */
+
+.erp-preview {
+    background:
+        radial-gradient(circle at 85% 15%,rgba(37,99,235,.12),transparent 35%),
+        #f1f5f9;
+}
+
+.gs-erp-window {
+    width: 90%;
+    height: 175px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.erp-header {
+    height: 30px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.erp-header strong {
+    color: #2563eb;
+    font-size: 7px;
+}
+
+.erp-header span {
+    width: 20px;
+    height: 6px;
+    border-radius: 5px;
+    background: #dcfce7;
+}
+
+.erp-layout {
+    display: flex;
+    height: calc(100% - 30px);
+}
+
+.erp-side {
+    width: 38px;
+    background: #0f172a;
+}
+
+.erp-main {
+    flex: 1;
+    padding: 13px;
+}
+
+.erp-boxes {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+
+.erp-boxes span {
+    height: 35px;
+    border-radius: 5px;
+    background: #eff6ff;
+}
+
+.erp-content {
+    margin-top: 10px;
+}
+
+.erp-content span {
+    display: block;
+    height: 9px;
+    margin-bottom: 7px;
+    border-radius: 3px;
+    background: #e2e8f0;
+}
+
+.erp-content span:nth-child(2) {
+    width: 75%;
+}
+
+
+/* EDUCATION */
+
+.education-preview {
+    background:
+        radial-gradient(circle at 20% 20%,rgba(6,182,212,.12),transparent 35%),
+        #f0fdfa;
+}
+
+.gs-education-window {
+    width: 90%;
+    height: 175px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.education-top {
+    height: 30px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.education-top strong {
+    color: #2563eb;
+    font-size: 7px;
+}
+
+.education-dashboard {
+    display: flex;
+    height: calc(100% - 30px);
+}
+
+.education-sidebar {
+    width: 37px;
+    padding-top: 12px;
+    background: #0f172a;
+}
+
+.education-sidebar span {
+    width: 20px;
+    height: 5px;
+    margin: 9px auto;
+    display: block;
+    border-radius: 3px;
+    background: #334155;
+}
+
+.education-main {
+    flex: 1;
+    padding: 14px;
+}
+
+.education-title {
+    width: 45%;
+    height: 8px;
+    border-radius: 3px;
+    background: #1e293b;
+}
+
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    margin-top: 12px;
+}
+
+.education-cards span {
+    height: 35px;
+    border-radius: 5px;
+    background: #eff6ff;
+}
+
+.education-table {
+    margin-top: 10px;
+}
+
+.education-table span {
+    display: block;
+    height: 7px;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    background: #e2e8f0;
+}
+
+
+/* BILLING */
+
+.billing-preview {
+    background:
+        radial-gradient(circle at 80% 20%,rgba(34,197,94,.1),transparent 35%),
+        #f8fafc;
+}
+
+.gs-billing-window {
+    width: 90%;
+    height: 175px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.billing-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.billing-top strong {
+    color: #0f172a;
+    font-size: 8px;
+}
+
+.billing-top span {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 11px;
+}
+
+.billing-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.billing-summary div {
+    padding: 10px;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+.billing-summary small,
+.billing-summary strong {
+    display: block;
+}
+
+.billing-summary small {
+    color: #94a3b8;
+    font-size: 7px;
+}
+
+.billing-summary strong {
+    margin-top: 3px;
+    color: #0f172a;
+    font-size: 13px;
+}
+
+.billing-invoice {
+    margin-top: 13px;
+}
+
+.billing-invoice span {
+    display: block;
+    height: 7px;
+    margin-bottom: 7px;
+    border-radius: 3px;
+    background: #e2e8f0;
+}
+
+
+/* E-COMMERCE */
+
+.ecommerce-preview {
+    background:
+        radial-gradient(circle at 15% 15%,rgba(37,99,235,.12),transparent 35%),
+        #eff6ff;
+}
+
+.gs-ecommerce-window {
+    width: 90%;
+    height: 175px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.ecommerce-top {
+    display: flex;
+    justify-content: space-between;
+    color: #2563eb;
+    font-size: 8px;
+}
+
+.ecommerce-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 6px;
+    margin-top: 18px;
+}
+
+.ecommerce-product-grid div span {
+    display: block;
+    height: 65px;
+    border-radius: 6px;
+    background: #eff6ff;
+}
+
+.ecommerce-product-grid div strong {
+    display: block;
+    width: 70%;
+    height: 5px;
+    margin-top: 7px;
+    border-radius: 3px;
+    background: #cbd5e1;
+}
+
+
+/* PHARMACY */
+
+.pharmacy-preview {
+    background:
+        radial-gradient(circle at 80% 20%,rgba(34,197,94,.11),transparent 35%),
+        #f0fdf4;
+}
+
+.gs-pharmacy-window {
+    width: 90%;
+    height: 175px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.pharmacy-top {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 13px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pharmacy-top i {
+    color: #22c55e;
+}
+
+.pharmacy-top strong {
+    color: #0f172a;
+    font-size: 7px;
+}
+
+.pharmacy-body {
+    padding: 15px;
+}
+
+.pharmacy-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.pharmacy-stats span {
+    padding: 9px;
+    border-radius: 6px;
+    background: #f8fafc;
+    color: #94a3b8;
+    font-size: 7px;
+}
+
+.pharmacy-stats strong {
+    display: block;
+    margin-top: 4px;
+    color: #0f172a;
+    font-size: 12px;
+}
+
+.pharmacy-list {
+    margin-top: 12px;
+}
+
+.pharmacy-list span {
+    display: block;
+    height: 8px;
+    margin-bottom: 7px;
+    border-radius: 3px;
+    background: #e2e8f0;
+}
+
+
+/* SERVICE */
+
+.service-preview {
+    background:
+        radial-gradient(circle at 20% 20%,rgba(6,182,212,.12),transparent 35%),
+        #f0f9ff;
+}
+
+.gs-service-window {
+    width: 90%;
+    height: 175px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.service-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-top strong {
+    color: #0f172a;
+    font-size: 7px;
+}
+
+.service-status {
+    padding: 4px 6px;
+    border-radius: 10px;
+    background: #f0fdf4;
+    color: #16a34a;
+    font-size: 6px;
+    font-weight: 800;
+}
+
+.service-flow {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-flow span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.service-flow > i {
+    color: #94a3b8;
+    font-size: 8px;
+}
+
+
+/* ANALYTICS */
+
+.analytics-preview {
+    background:
+        radial-gradient(circle at 80% 15%,rgba(37,99,235,.13),transparent 35%),
+        #f1f5f9;
+}
+
+.gs-analytics-window {
+    width: 90%;
+    height: 175px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(15,23,42,.1);
+}
+
+.analytics-top {
+    display: flex;
+    justify-content: space-between;
+    color: #2563eb;
+    font-size: 7px;
+}
+
+.analytics-chart {
+    height: 120px;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 7px;
+    background: #f8fafc;
+}
+
+.analytics-bars {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.analytics-bars span {
+    width: 10%;
+    min-height: 10px;
+    border-radius: 4px 4px 2px 2px;
+    background: linear-gradient(to top,#2563eb,#06b6d4);
+}
+
+
+/* ==========================================================
+   PROJECT CARD CONTENT
+========================================================== */
+
+.gs-project-card-body {
+    padding: 25px;
+}
+
+.gs-project-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gs-project-meta span {
+    color: #2563eb;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.gs-project-meta i {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.gs-project-card-body h3 {
+    margin: 8px 0 10px;
+    color: #0f172a;
+    font-family: "Poppins",sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.gs-project-card-body p {
+    min-height: 65px;
+    margin-bottom: 17px;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+.gs-project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.gs-project-tags span {
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.gs-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #2563eb !important;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.gs-project-link i {
+    transition: .3s ease;
+}
+
+.gs-project-link:hover {
+    color: #0f172a !important;
+}
+
+.gs-project-link:hover i {
+    transform: translate(3px,-3px);
+}
+
+
+/* ==========================================================
+   TECHNOLOGY
+========================================================== */
+
+.gs-projects-technology {
+    overflow: hidden;
+}
+
+.gs-project-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+}
+
+.gs-project-tech-grid div {
+    min-height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 13px;
+    background: rgba(255,255,255,.035);
+    color: #cbd5e1;
+    transition: .3s ease;
+}
+
+.gs-project-tech-grid div:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96,165,250,.25);
+    background: rgba(37,99,235,.1);
+}
+
+.gs-project-tech-grid i {
+    color: #60a5fa;
+    font-size: 21px;
+}
+
+.gs-project-tech-grid span {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   PROJECT APPROACH
+========================================================== */
+
+.gs-project-approach {
+    padding-top: 100px;
+    padding-bottom: 105px;
+}
+
+.gs-project-approach-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 14px;
+    margin-top: 55px;
+}
+
+.gs-project-approach-card {
+    position: relative;
+    min-height: 220px;
+    padding: 24px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #fff;
+    transition: .35s ease;
+}
+
+.gs-project-approach-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37,99,235,.18);
+    box-shadow: 0 18px 40px rgba(15,23,42,.08);
+}
+
+.gs-project-approach-card > span {
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    color: #e2e8f0;
+    font-family: "Poppins",sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.gs-project-approach-card > div {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.gs-project-approach-card h3 {
+    margin: 25px 0 8px;
+    color: #0f172a;
+    font-family: "Poppins",sans-serif;
+    font-size: 17px;
+}
+
+.gs-project-approach-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   CUSTOM PROJECT CTA
+========================================================== */
+
+.gs-project-custom-cta {
+    padding-bottom: 95px;
+    background: #f8fafc;
+}
+
+.gs-project-custom-box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 30px 35px;
+    border-radius: 19px;
+    background: linear-gradient(135deg,#0b1f36,#0f3555);
+    box-shadow: 0 20px 50px rgba(7,26,43,.15);
+}
+
+.gs-project-custom-box::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: -100px;
+    top: -140px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+}
+
+.gs-project-custom-icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(37,99,235,.14);
+    color: #60a5fa;
+    font-size: 22px;
+}
+
+.gs-project-custom-content {
+    flex: 1;
+}
+
+.gs-project-custom-content > span {
+    color: #60a5fa;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.gs-project-custom-content h2 {
+    margin: 5px 0 6px;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+}
+
+.gs-project-custom-content h2 strong {
+    color: #93c5fd;
+}
+
+.gs-project-custom-content p {
+    max-width: 650px;
+    margin: 0;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.gs-project-custom-box > .gs-btn {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==========================================================
+   FINAL CTA
+========================================================== */
+
+.gs-projects-final-cta {
+    padding-top: 100px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1199px) {
+
+    .gs-project-approach-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+
+@media (max-width:991px) {
+
+    .gs-projects-page-hero {
+        padding: 125px 0 75px;
+    }
+
+    .gs-projects-page-hero h1 {
+        font-size: 48px;
+    }
+
+    .gs-projects-hero-visual {
+        min-height: 410px;
+    }
+
+    .gs-project-floating-card {
+        left: 5%;
+        bottom: 15px;
+    }
+
+    .gs-project-approach-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gs-project-custom-box {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width:767px) {
+
+    .gs-projects-page-hero {
+        padding: 110px 0 60px;
+    }
+
+    .gs-projects-page-hero h1 {
+        font-size: 37px;
+        letter-spacing: -1.4px;
+    }
+
+    .gs-projects-page-hero p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .gs-projects-hero-actions {
+        flex-direction: column;
+    }
+
+    .gs-projects-hero-actions .gs-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gs-projects-trust-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gs-projects-hero-visual {
+        min-height: 350px;
+    }
+
+    .gs-project-browser {
+        width: 94%;
+        transform: none;
+    }
+
+    .gs-project-browser-body {
+        min-height: 280px;
+    }
+
+    .gs-browser-dashboard {
+        padding: 18px;
+    }
+
+    .gs-browser-chart {
+        display: none;
+    }
+
+    .gs-project-floating-card {
+        left: 0;
+        bottom: 0;
+        padding: 10px 12px;
+    }
+
+    .gs-projects-intro {
+        padding-top: 60px;
+        padding-bottom: 45px;
+    }
+
+    .gs-projects-list-section {
+        padding-top: 65px;
+        padding-bottom: 70px;
+    }
+
+    .gs-project-filter {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+    }
+
+    .gs-project-filter button {
+        flex: 0 0 auto;
+    }
+
+    .gs-project-preview {
+        height: 210px;
+    }
+
+    .gs-project-card-body {
+        padding: 23px;
+    }
+
+    .gs-project-card-body p {
+        min-height: auto;
+    }
+
+    .gs-projects-technology {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gs-project-tech-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gs-project-approach {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gs-project-approach-grid {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+    .gs-project-approach-card {
+        min-height: auto;
+    }
+
+    .gs-project-custom-cta {
+        padding-bottom: 70px;
+    }
+
+    .gs-project-custom-box {
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .gs-project-custom-content {
+        min-width: calc(100% - 65px);
+    }
+
+    .gs-project-custom-content h2 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .gs-project-custom-box > .gs-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gs-projects-final-cta {
+        padding-top: 70px;
+    }
+
+}
+
+
+@media (max-width:420px) {
+
+    .gs-projects-page-hero h1 {
+        font-size: 32px;
+    }
+
+    .gs-project-card-body h3 {
+        font-size: 18px;
+    }
+
+    .gs-project-tech-grid {
+        gap: 8px;
+    }
+
+}
+```css
+/* =========================================================
+   GS TECH SOLUTIONS
+   CONTACT PAGE
+========================================================= */
+
+.gs-contact-page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.gs-contact-page-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -220px;
+    right: -150px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(37, 99, 235, 0.10),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.gs-contact-page-hero h1 span {
+    display: block;
+    color: var(--gs-primary);
+}
+
+.gs-contact-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.gs-contact-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.gs-contact-trust div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gs-contact-trust i {
+    color: #22c55e;
+    font-size: 14px;
+}
+
+
+/* HERO VISUAL */
+
+.gs-contact-hero-visual {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-contact-orbit {
+    position: absolute;
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    width: 390px;
+    height: 390px;
+}
+
+.orbit-two {
+    width: 290px;
+    height: 290px;
+}
+
+.gs-contact-hero-card {
+    position: relative;
+    z-index: 2;
+    width: 330px;
+    padding: 30px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.14);
+    backdrop-filter: blur(15px);
+}
+
+.gs-contact-card-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    background: linear-gradient(
+        135deg,
+        var(--gs-primary),
+        var(--gs-secondary)
+    );
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.22);
+}
+
+.gs-contact-hero-card > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.gs-contact-hero-card > strong {
+    display: block;
+    margin-bottom: 24px;
+    color: #0f172a;
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    line-height: 1.35;
+}
+
+.gs-contact-mini-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 0;
+    border-top: 1px solid #eef2f7;
+}
+
+.gs-contact-mini-row > div:first-child {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: var(--gs-primary);
+}
+
+.gs-contact-mini-row small,
+.gs-contact-mini-row b {
+    display: block;
+}
+
+.gs-contact-mini-row small {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.gs-contact-mini-row b {
+    margin-top: 2px;
+    color: #334155;
+    font-size: 12px;
+}
+
+.gs-contact-floating {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 14px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
+    color: #334155;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.gs-contact-floating i {
+    color: var(--gs-primary);
+    font-size: 15px;
+}
+
+.floating-top {
+    top: 65px;
+    right: 0;
+}
+
+.floating-bottom {
+    bottom: 65px;
+    left: 0;
+}
+
+
+/* CONTACT INFO */
+
+.gs-contact-info-section {
+    background: #fff;
+}
+
+.gs-contact-info-card {
+    height: 100%;
+    padding: 27px;
+    border: 1px solid #e7edf4;
+    border-radius: 16px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.gs-contact-info-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.25);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.gs-contact-info-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: var(--gs-primary);
+    font-size: 20px;
+}
+
+.gs-contact-info-card > span {
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gs-contact-info-card h4 {
+    margin: 6px 0 10px;
+    color: #0f172a;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+}
+
+.gs-contact-info-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.gs-contact-info-card p a {
+    color: #475569;
+    font-weight: 600;
+}
+
+.gs-contact-info-card p a:hover {
+    color: var(--gs-primary);
+}
+
+
+/* MAIN FORM */
+
+.gs-contact-main-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.gs-contact-form-intro {
+    padding-right: 30px;
+}
+
+.gs-contact-form-intro h2 {
+    margin: 15px 0;
+    color: #0f172a;
+    font-family: Poppins, sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.gs-contact-form-intro h2 span {
+    color: var(--gs-primary);
+}
+
+.gs-contact-form-intro > p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.gs-contact-benefits {
+    margin-top: 32px;
+}
+
+.gs-contact-benefit {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.gs-benefit-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: #eff6ff;
+    color: var(--gs-primary);
+    font-size: 18px;
+}
+
+.gs-contact-benefit h5 {
+    margin: 0 0 4px;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.gs-contact-benefit p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.gs-quick-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    padding: 16px;
+    border-radius: 13px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+}
+
+.gs-quick-contact-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #ecfdf5;
+    color: #16a34a;
+}
+
+.gs-quick-contact small,
+.gs-quick-contact a {
+    display: block;
+}
+
+.gs-quick-contact small {
+    margin-bottom: 2px;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.gs-quick-contact a {
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* FORM CARD */
+
+.gs-contact-form-card {
+    padding: 34px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.07);
+}
+
+.gs-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.gs-form-header span {
+    color: var(--gs-primary);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gs-form-header h3 {
+    margin: 5px 0 0;
+    color: #0f172a;
+    font-family: Poppins, sans-serif;
+    font-size: 21px;
+}
+
+.gs-form-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: var(--gs-primary);
+    font-size: 19px;
+}
+
+.gs-contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.gs-contact-form label small {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.gs-input-wrap,
+.gs-textarea-wrap {
+    position: relative;
+}
+
+.gs-input-wrap > i,
+.gs-textarea-wrap > i {
+    position: absolute;
+    z-index: 2;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.gs-textarea-wrap > i {
+    top: 20px;
+    transform: none;
+}
+
+.gs-contact-form .form-control {
+    min-height: 48px;
+    padding: 11px 14px 11px 42px;
+    border: 1px solid #dfe6ee;
+    border-radius: 9px;
+    background: #fff;
+    color: #334155;
+    font-size: 12px;
+    box-shadow: none;
+    transition: all 0.25s ease;
+}
+
+.gs-contact-form select.form-control {
+    cursor: pointer;
+}
+
+.gs-contact-form textarea.form-control {
+    min-height: 135px;
+    resize: vertical;
+    padding-top: 14px;
+}
+
+.gs-contact-form .form-control:focus {
+    border-color: var(--gs-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.gs-contact-form .form-control:focus + i {
+    color: var(--gs-primary);
+}
+
+.gs-form-submit {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7px;
+    padding: 8px 9px 8px 20px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+        135deg,
+        var(--gs-primary),
+        #2563eb
+    );
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gs-form-submit i {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.gs-form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.22);
+}
+
+.gs-form-note {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0 0;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.gs-form-note i {
+    color: #22c55e;
+    font-size: 13px;
+}
+
+
+/* SERVICES */
+
+.gs-contact-services {
+    background: #fff;
+}
+
+.gs-contact-service-card {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 30px;
+    overflow: hidden;
+    border: 1px solid #e5ebf2;
+    border-radius: 17px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.gs-contact-service-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(37, 99, 235, 0.25);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.gs-contact-service-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #e2e8f0;
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.gs-contact-service-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: var(--gs-primary);
+    font-size: 20px;
+}
+
+.gs-contact-service-card h4 {
+    margin-bottom: 10px;
+    color: #0f172a;
+    font-family: Poppins, sans-serif;
+    font-size: 17px;
+}
+
+.gs-contact-service-card p {
+    min-height: 55px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.gs-contact-service-card > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--gs-primary);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.gs-contact-service-card > span i {
+    transition: transform 0.3s ease;
+}
+
+.gs-contact-service-card:hover > span i {
+    transform: translate(3px, -3px);
+}
+
+
+/* PROCESS */
+
+.gs-contact-process {
+    padding-bottom: 100px;
+}
+
+.gs-contact-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.gs-contact-process-card {
+    position: relative;
+    padding: 30px 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.gs-contact-process-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+.gs-contact-process-card > span {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #cbd5e1;
+    font-family: Poppins, sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.gs-contact-process-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: var(--gs-primary);
+    font-size: 20px;
+}
+
+.gs-contact-process-card h4 {
+    margin-bottom: 8px;
+    color: #0f172a;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+}
+
+.gs-contact-process-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* FINAL CTA */
+
+.gs-contact-final-cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.gs-contact-final-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 48px;
+    overflow: hidden;
+    border-radius: 22px;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(0, 184, 217, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #071a2b,
+            #0b3c5d
+        );
+}
+
+.gs-contact-final-content h2 {
+    margin: 13px 0;
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.gs-contact-final-content h2 span {
+    color: #60a5fa;
+}
+
+.gs-contact-final-content p {
+    max-width: 580px;
+    margin: 0;
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.gs-contact-final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.gs-btn-light {
+    background: #fff;
+    color: #0f172a !important;
+}
+
+.gs-btn-light:hover {
+    background: #f1f5f9;
+}
+
+
+/* =========================================================
+   CONTACT RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .gs-contact-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gs-contact-form-intro {
+        padding-right: 0;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .gs-contact-hero-visual {
+        min-height: 400px;
+        margin-top: 20px;
+    }
+
+    .gs-contact-info-card {
+        padding: 23px;
+    }
+
+    .gs-contact-final-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .gs-contact-page-hero h1 {
+        font-size: 34px;
+    }
+
+    .gs-contact-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gs-contact-hero-actions .gs-btn {
+        justify-content: center;
+    }
+
+    .gs-contact-trust {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gs-contact-hero-visual {
+        min-height: 350px;
+    }
+
+    .orbit-one {
+        width: 310px;
+        height: 310px;
+    }
+
+    .orbit-two {
+        width: 230px;
+        height: 230px;
+    }
+
+    .gs-contact-hero-card {
+        width: 290px;
+        padding: 25px;
+    }
+
+    .floating-top {
+        top: 15px;
+        right: 0;
+    }
+
+    .floating-bottom {
+        bottom: 15px;
+        left: 0;
+    }
+
+    .gs-contact-main-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gs-contact-form-intro h2 {
+        font-size: 30px;
+    }
+
+    .gs-contact-form-card {
+        padding: 23px;
+    }
+
+    .gs-contact-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gs-contact-final-box {
+        padding: 32px 25px;
+    }
+
+    .gs-contact-final-content h2 {
+        font-size: 28px;
+    }
+
+    .gs-contact-final-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .gs-contact-final-actions .gs-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .gs-contact-hero-card {
+        width: 270px;
+    }
+
+    .gs-contact-floating {
+        padding: 9px 11px;
+        font-size: 10px;
+    }
+
+    .gs-contact-form-card {
+        padding: 18px;
+    }
+
+}
+
